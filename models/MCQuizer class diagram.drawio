@@ -1,11 +1,11 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Pagina-1" id="bMAQBqQTSskjFwqwFn8u">
-    <mxGraphModel dx="2049" dy="1103" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1813" dy="976" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="TEp35lAjdyqUnbLiRw4K-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Question" vertex="1">
-          <mxGeometry height="330" width="200" x="290" y="640" as="geometry" />
+          <mxGeometry height="200" width="200" x="290" y="640" as="geometry" />
         </mxCell>
         <mxCell id="TEp35lAjdyqUnbLiRw4K-2" parent="TEp35lAjdyqUnbLiRw4K-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- questionID: int" vertex="1">
           <mxGeometry height="26" width="200" y="26" as="geometry" />
@@ -13,11 +13,11 @@
         <mxCell id="TEp35lAjdyqUnbLiRw4K-3" parent="TEp35lAjdyqUnbLiRw4K-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
           <mxGeometry height="8" width="200" y="52" as="geometry" />
         </mxCell>
-        <mxCell id="TEp35lAjdyqUnbLiRw4K-4" parent="TEp35lAjdyqUnbLiRw4K-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;Question(question: string,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;A: string,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;B: string,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;C: string,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;D: string,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;E: string,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;F: string,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Right: string,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Explenation: string,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;DateAdded: date,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Creator: int)&lt;/div&gt;&lt;div&gt;+ getQuestionDBobject(): dict&lt;/div&gt;&lt;div&gt;+ getQuestionID(): int&lt;/div&gt;&lt;div&gt;+ getRightAnswer(): int&lt;/div&gt;&lt;div&gt;+ getQuestionText(): int&lt;/div&gt;&lt;div&gt;+ getQuestionExplenation(): string&lt;/div&gt;&lt;div&gt;+ getQuestionDateAdded(): date&lt;/div&gt;&lt;div&gt;+ getQuestionCreator(): id&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="270" width="200" y="60" as="geometry" />
+        <mxCell id="TEp35lAjdyqUnbLiRw4K-4" parent="TEp35lAjdyqUnbLiRw4K-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;Question(question: id)&lt;/div&gt;&lt;div&gt;+ getQuestionDBobject(): dict&lt;/div&gt;&lt;div&gt;+ getQuestionID(): int&lt;/div&gt;&lt;div&gt;+ getRightAnswer(): int&lt;/div&gt;&lt;div&gt;+ getQuestionText(): int&lt;/div&gt;&lt;div&gt;+ getQuestionExplenation(): string&lt;/div&gt;&lt;div&gt;+ getQuestionDateAdded(): date&lt;/div&gt;&lt;div&gt;+ getQuestionCreator(): id&lt;/div&gt;&lt;div&gt;+ questionExistsInDB(): bool&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="200" y="60" as="geometry" />
         </mxCell>
         <mxCell id="TEp35lAjdyqUnbLiRw4K-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Quiz" vertex="1">
-          <mxGeometry height="180" width="220" x="290" y="360" as="geometry" />
+          <mxGeometry height="200" width="220" x="320" y="260" as="geometry" />
         </mxCell>
         <mxCell id="TEp35lAjdyqUnbLiRw4K-6" parent="TEp35lAjdyqUnbLiRw4K-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- quizID: int" vertex="1">
           <mxGeometry height="26" width="220" y="26" as="geometry" />
@@ -25,8 +25,8 @@
         <mxCell id="TEp35lAjdyqUnbLiRw4K-7" parent="TEp35lAjdyqUnbLiRw4K-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
           <mxGeometry height="8" width="220" y="52" as="geometry" />
         </mxCell>
-        <mxCell id="TEp35lAjdyqUnbLiRw4K-8" parent="TEp35lAjdyqUnbLiRw4K-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;Quiz(id: int)&lt;/div&gt;&lt;div&gt;+ getID(): int&lt;/div&gt;&lt;div&gt;+ getQuestions(): list &amp;lt;Question&amp;gt;&lt;/div&gt;&lt;div&gt;+ getQuestion(question): &amp;lt;Question&amp;gt;&lt;/div&gt;&lt;div&gt;+ getCreator(): string&lt;/div&gt;&lt;div&gt;+ addQuestion(question): bool&lt;/div&gt;&lt;div&gt;+ removeQuestion(question):bool&lt;/div&gt;&lt;div&gt;+ existsInDB(ID)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="120" width="220" y="60" as="geometry" />
+        <mxCell id="TEp35lAjdyqUnbLiRw4K-8" parent="TEp35lAjdyqUnbLiRw4K-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;Quiz(id: int)&lt;/div&gt;&lt;div&gt;+getQuizDBobject(): dict&lt;/div&gt;&lt;div&gt;+ getQuizID(): int&lt;/div&gt;&lt;div&gt;+ getQuestions(): list &amp;lt;Question&amp;gt;&lt;/div&gt;&lt;div&gt;+ getQuestion(question): &amp;lt;Question&amp;gt;&lt;/div&gt;&lt;div&gt;+ getCreator(): string&lt;/div&gt;&lt;div&gt;+ addQuestion(question): bool&lt;/div&gt;&lt;div&gt;+ removeQuestion(question):bool&lt;/div&gt;&lt;div&gt;+ QuizExistsInDB(): bool&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="220" y="60" as="geometry" />
         </mxCell>
         <mxCell id="TEp35lAjdyqUnbLiRw4K-9" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Result" vertex="1">
           <mxGeometry height="310" width="160" x="610" y="390" as="geometry" />
@@ -46,11 +46,11 @@
         <mxCell id="TEp35lAjdyqUnbLiRw4K-22" parent="TEp35lAjdyqUnbLiRw4K-21" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
           <mxGeometry height="8" width="180" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="TEp35lAjdyqUnbLiRw4K-23" parent="TEp35lAjdyqUnbLiRw4K-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;StudentUI(studentUI:studentUI)&lt;/div&gt;&lt;div&gt;+run(): None&lt;/div&gt;" vertex="1">
+        <mxCell id="TEp35lAjdyqUnbLiRw4K-23" parent="TEp35lAjdyqUnbLiRw4K-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;StudentGUI(studentUI:studentUI)&lt;/div&gt;&lt;div&gt;+run(): None&lt;/div&gt;" vertex="1">
           <mxGeometry height="36" width="180" y="34" as="geometry" />
         </mxCell>
         <mxCell id="TEp35lAjdyqUnbLiRw4K-24" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Subject" vertex="1">
-          <mxGeometry height="130" width="180" x="60" y="800" as="geometry" />
+          <mxGeometry height="160" width="180" x="60" y="800" as="geometry" />
         </mxCell>
         <mxCell id="TEp35lAjdyqUnbLiRw4K-25" parent="TEp35lAjdyqUnbLiRw4K-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- subjectID: int" vertex="1">
           <mxGeometry height="26" width="180" y="26" as="geometry" />
@@ -58,11 +58,11 @@
         <mxCell id="TEp35lAjdyqUnbLiRw4K-26" parent="TEp35lAjdyqUnbLiRw4K-24" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
           <mxGeometry height="8" width="180" y="52" as="geometry" />
         </mxCell>
-        <mxCell id="TEp35lAjdyqUnbLiRw4K-27" parent="TEp35lAjdyqUnbLiRw4K-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;Subject(id: int)&lt;/div&gt;&lt;div&gt;+ getID(): int&lt;/div&gt;&lt;div&gt;+ existsInDB(subjectID)&lt;/div&gt;&lt;div&gt;+ showQuestions(subjectID)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="70" width="180" y="60" as="geometry" />
+        <mxCell id="TEp35lAjdyqUnbLiRw4K-27" parent="TEp35lAjdyqUnbLiRw4K-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;Subject(id: int)&lt;/div&gt;&lt;div&gt;+ getID(): int&lt;/div&gt;&lt;div&gt;+ getSubjectName(): string&lt;/div&gt;&lt;div&gt;+getSubjectDomain(): string&lt;/div&gt;&lt;div&gt;+ existsInDB(subjectID)&lt;/div&gt;&lt;div&gt;+ showQuestions(subjectID)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="180" y="60" as="geometry" />
         </mxCell>
-        <mxCell id="TEp35lAjdyqUnbLiRw4K-29" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Teacher" vertex="1">
-          <mxGeometry height="216" width="220" x="60" y="50" as="geometry" />
+        <mxCell id="TEp35lAjdyqUnbLiRw4K-29" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="TeacherUI" vertex="1">
+          <mxGeometry height="150" width="220" x="60" y="50" as="geometry" />
         </mxCell>
         <mxCell id="TEp35lAjdyqUnbLiRw4K-30" parent="TEp35lAjdyqUnbLiRw4K-29" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;- activeUser: int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="24" width="220" y="26" as="geometry" />
@@ -70,8 +70,8 @@
         <mxCell id="TEp35lAjdyqUnbLiRw4K-31" parent="TEp35lAjdyqUnbLiRw4K-29" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
           <mxGeometry height="18" width="220" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="TEp35lAjdyqUnbLiRw4K-32" parent="TEp35lAjdyqUnbLiRw4K-29" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;Quiz(id: int)&lt;/div&gt;&lt;div&gt;+ getID(): int&lt;/div&gt;&lt;div&gt;+ getQuestion(question): &amp;lt;Question&amp;gt;&lt;/div&gt;&lt;div&gt;+ getCreator(): string&lt;/div&gt;&lt;div&gt;+ addQuestion(): bool&lt;/div&gt;&lt;div&gt;+ removeQuestion(ID):bool&lt;/div&gt;&lt;div&gt;+ existsInDB(ID)&lt;/div&gt;&lt;div&gt;+ authorize(username, password): bool&lt;/div&gt;&lt;div&gt;+ getUsername(): string&lt;/div&gt;" vertex="1">
-          <mxGeometry height="148" width="220" y="68" as="geometry" />
+        <mxCell id="TEp35lAjdyqUnbLiRw4K-32" parent="TEp35lAjdyqUnbLiRw4K-29" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;TeacherGUI(TeacherUI: teacherUI)&lt;/div&gt;&lt;div&gt;+ getActiveUserID(): int&lt;/div&gt;&lt;div&gt;+ getUsername(): string&lt;/div&gt;&lt;div&gt;+ authorize(username, password): bool&lt;/div&gt;&lt;div&gt;+ addToDabatase(type, list)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="82" width="220" y="68" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
