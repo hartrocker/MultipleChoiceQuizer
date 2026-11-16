@@ -137,16 +137,13 @@ class WorkframeUI():
                 return
         self.__questionHandler.insertQuestion(question, A, B, explanation, teacherID, rightAnswer,  C, D, E, F)
         questionid = self.__questionHandler.getLastID()
-        '''
-        for subject in self.__subjectlist:
-            value = subject.get()
-            print(value)
-        '''
+        # get the selected checkboxes into selected
         selected = []
         for option, var in zip(self.__subjects, self.__subjectlist):
             if var.get():
                 selected.append(option)
         print("Selected options:", selected)
+        # add question/subject record to database for each selected subject
         for subject in selected:
             subject = subject[0]
             print('we gaan een subject toevoegen, namelijk ', subject, ' voor vraag', questionid)

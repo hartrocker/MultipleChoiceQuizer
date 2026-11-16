@@ -7,8 +7,9 @@ class QuestionHandler(DB_handler):
     def __init__(self):
         super().__init__()
 
-    '''QUESTION SECTION, TO BE MOVED TO QUESTION HANDLER CLASS'''
     def addQuestionToSubject(self, questionid, subjectid):
+        # Responsiblity:
+        # insert the provided questionid and subjectid into the questionSubject table
         insertQuestionSubjectQuery = "INSERT into questionSubject (questionID, subjectID) VALUES (?, ?)"
         print(insertQuestionSubjectQuery)
         try:
@@ -21,6 +22,9 @@ class QuestionHandler(DB_handler):
 
     def insertQuestion(self, question, answerA, answerB, explanation, creatorID, rightAnswer, answerC=None,
                            answerD=None, answerE=None, answerF=None):
+        # Responsiblity:
+        # insert the provided question into the question table
+
         insertQuestionQuery = "INSERT INTO question (question, A, B, C, D, E, F, rightAnswer, explanation, dateAdded, creatorID) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         dateAdded = self.getDateString()
         print(insertQuestionQuery)

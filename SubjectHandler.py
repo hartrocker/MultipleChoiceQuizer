@@ -7,9 +7,10 @@ class SubjectHandler(DB_handler):
     def __init__(self):
         super().__init__()
 
-    '''SUBJECT SECTION, TO BE MOVED TO SUBJECT HANDLER CLASS'''
 
 def getSubjects(self):
+    # Responsiblity:
+    # get all subjects from the database
     getSubjectsQuery = "SELECT * FROM subject"
     try:
         DB_handler._DBoperator.execute(getSubjectsQuery)
