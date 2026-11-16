@@ -93,7 +93,7 @@ class WorkframeUI():
         )
 
         # Building the subject checkboxes
-        self.__subjects = self.__subjectHandler.getSubjects()
+        self.__subjects = self.__subjectHandler.getAllSubjects()
         print(self.__subjects)
         tk.Label(self.frame, text="Onderwerpen").grid(row=9, column=1)
         placement = 10
