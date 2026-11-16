@@ -99,3 +99,14 @@ class QuestionHandler(DB_handler):
             self._conn.commit()
         except sqlite3.OperationalError as error:
             print(error)
+
+    def editQuestion(self, questionID, question, answerA, answerB, explanation, creatorID, rightAnswer, answerC=None, answerD=None, answerE=None, answerF=None):
+        # Responsiblity:
+        # edit the question with the provided questionID
+        editQuestionQuery = "UPDATE question SET question = ?, A = ?, B = ?, C = ?, D = ?, E = ?, F = ?, rightAnswer = ?, explanation = ? WHERE questionID = ?"
+        try:
+            self._DBoperator.execute(editQuestionQuery,
+                                   (question, answerA, answerB, answerC, answerD, answerE, answerF, rightAnswer, explanation, questionID))
+            self._conn.commit()
+        except sqlite3.OperationalError as error:
+            print(error)
