@@ -6,6 +6,12 @@ class ResultHandler(DB_handler):
     def __init__(self):
         super().__init__()
 
+    def resultIDExists(self, id):
+        if self.getResult(id):
+            return True
+        else:
+            return False
+
     def getAllResults(self):
         # Responsibility:
         # get all results from the result table
@@ -56,13 +62,13 @@ class ResultHandler(DB_handler):
         except sqlite3.OperationalError as error:
             print(error)
 
-    def addResult(self, studentclass, quiztype, score, goodAnswers, noOfQuestions = None, quizid = None, subjectid = None):
+    def addResult(self, studentname, studentclass, quiztype, goodAnswers, noOfQuestions, quizid = None,  subjectid = None):
         # Responsibility:
         # insert the provided result into the result table
         dateAdded=self.getDateString()
-        insertResultQuery = "INSERT INTO result (studentclass, type, goodAnswers, noOfQuestions, quizid, subjectid) VALUES (?, ?, ?, ?, ?, ?)"
+        insertResultQuery = "INSERT INTO result (studentname, studentclass, type, goodAnswers, noOfQuestions, quizid, subjectid) VALUES (?, ?, ?, ?, ?, ?, ?)"
         try:
-            self._DBoperator.execute(insertResultQuery, (studentclass, quiztype, score, goodAnswers, noOfQuestions, quizid, subjectid))
+            self._DBoperator.execute(insertResultQuery, (studentname, studentclass, quiztype, goodAnswers, noOfQuestions, quizid, subjectid))
             self._conn.commit()
         except sqlite3.OperationalError as error:
             print(error)

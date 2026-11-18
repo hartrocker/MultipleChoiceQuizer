@@ -7,13 +7,19 @@ class QuestionHandler(DB_handler):
     def __init__(self):
         super().__init__()
 
+    def questionIDExists(self, id):
+        if self.getQuestion(id):
+            return True
+        else:
+            return False
+
     def getAllQuestions(self):
         # Responsiblity:
         # get all questions from the database
-        getQuestionsQuery = "SELECT * FROM question"
+        getQuestionsQuery = "SELECT questionID, question, explanation, rightAnswer, dateAdded, creatorID, A, B, C, D, E, F FROM question"
         try:
             self._DBoperator.execute(getQuestionsQuery)
-            print(self._DBoperator.fetchall())
+            #print(self._DBoperator.fetchall())
             return self._DBoperator.fetchall()
         except sqlite3.OperationalError as error:
             print(error)
@@ -21,7 +27,7 @@ class QuestionHandler(DB_handler):
     def getQuestion(self, questionid):
         # Responsibility:
         # get the question with the provided questionid
-        getQuestionQuery = "SELECT * FROM question WHERE questionID = ?"
+        getQuestionQuery = "SELECT questionID, question, explanation, rightAnswer, dateAdded, creatorID, A, B, C, D, E, F FROM question WHERE questionID = ?"
         try:
             self._DBoperator.execute(getQuestionQuery, (questionid,))
             return self._DBoperator.fetchone()
@@ -31,19 +37,24 @@ class QuestionHandler(DB_handler):
     def getQuestionforQuiz(self, quizid):
         # Responsibility:
         # get all questions for the provided quizid
-        getQuestionforQuizQuery = "SELECT * FROM question, quizQuestion, quiz WHERE  quiz.quizID = quizQuestion.quizID AND question.questionID = quizQuestion.questionID AND quiz.quizID = ?"
+        getQuestionforQuizQuery = "SELECT question.questionID, question.question, question.explanation, question.rightAnswer, question.dateAdded, question.creatorID, question.A, question.B, question.C, question.D, question.E, question.F FROM question, quizQuestion, quiz WHERE  quiz.quizID = quizQuestion.quizID AND question.questionID = quizQuestion.questionID AND quiz.quizID = ?"
+        print(getQuestionforQuizQuery)
+        print("Gonna get questions for quiz", quizid)
         try:
             self._DBoperator.execute(getQuestionforQuizQuery, (quizid))
             return self._DBoperator.fetchall()
         except sqlite3.OperationalError as error:
             print(error)
 
-    def getQuestionforSubject(self, subjectid):
+    def getQuestionforSubject(self, subjectid, random = None, maximum = None):
         # Responsibility:
         # get all questions for the provided quizid
-        getQuestionforSubjectQuery = "SELECT * FROM question, questionSubject, subject WHERE  subject.subjectID = questionSubject.subjectID AND question.questionID = questionSubject.questionID AND subject.subjectID = ?"
+        if not random:
+            getQuestionforSubjectQuery = "SELECT question.questionID, question.question, question.explanation, question.rightAnswer, question.dateAdded, question.creatorID, question.A, question.B, question.C, question.D, question.E, question.F FROM question, questionSubject, subject WHERE  subject.subjectID = questionSubject.subjectID AND question.questionID = questionSubject.questionID AND subject.subjectID = ?"
+        else:
+            getQuestionforSubjectQuery = "SELECT question.questionID, question.question, question.explanation, question.rightAnswer, question.dateAdded, question.creatorID, question.A, question.B, question.C, question.D, question.E, question.F FROM question, questionSubject, subject WHERE  subject.subjectID = questionSubject.subjectID AND question.questionID = questionSubject.questionID AND subject.subjectID = ? ORDER BY RANDOM() LIMIT ?"
         try:
-            self._DBoperator.execute(getQuestionforSubjectQuery, (subjectid))
+            self._DBoperator.execute(getQuestionforSubjectQuery, (subjectid, maximum))
             return self._DBoperator.fetchall()
         except sqlite3.OperationalError as error:
             print(error)
@@ -67,9 +78,37 @@ class QuestionHandler(DB_handler):
             self._DBoperator.execute(insertQuestionSubjectQuery,
                                    (questionid, subjectid))
             self._conn.commit()
+            return True
         except sqlite3.OperationalError as error:
             print(error)
 
+    def addQuestionToQuiz(self, questionid, quizid):
+        # Responsiblity:
+        # insert the provided questionid and subjectid into the questionSubject table
+        insertQuestionQuizQuery = "INSERT into quizQuestion (questionID, quizid) VALUES (?, ?)"
+        print(insertQuestionQuizQuery)
+        print("adding quiz ", quizid, " and question ",questionid)
+        try:
+            self._DBoperator.execute(insertQuestionQuizQuery,
+                                   (questionid, quizid))
+            self._conn.commit()
+            return True
+        except sqlite3.OperationalError as error:
+            print(error)
+            return False
+
+    def removeQuestionFromQuiz(self, questionid, quizid):
+        # Responsiblity:
+        # remove the provided questionid and subjectid from the questionSubject table
+        removeQuestionQuizQuery = "DELETE from quizQuestion WHERE questionID = ? AND quizID = ?"
+        print(removeQuestionQuizQuery)
+        print("removing quiz ", quizid, " and question ",questionid)
+        try:
+            self._DBoperator.execute(removeQuestionQuizQuery, (questionid, quizid))
+            self._conn.commit()
+        except sqlite3.OperationalError as error:
+            print(error)
+            return False
 
     def insertQuestion(self, question, answerA, answerB, explanation, creatorID, rightAnswer, answerC=None,
                            answerD=None, answerE=None, answerF=None):

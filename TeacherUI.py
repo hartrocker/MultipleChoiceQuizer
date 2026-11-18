@@ -1,5 +1,6 @@
 import tkinter as tk
 
+from ResultHandler import ResultHandler
 from WorkframeUI import WorkframeUI
 from DB_handler import DB_handler
 from QuestionHander import QuestionHandler
@@ -52,7 +53,7 @@ class TeacherUI():
             width=BUTTONWIDTH,
             height=BUTTONHEIGHT,
             bg='aquamarine',
-            command=lambda: self.WorkFrameUI.buildAddQuestionInterface()
+            command=lambda: self.makeQuiz()
         )
         self.__buttonMakeQuiz.grid(row=1, column=2, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
 
@@ -62,7 +63,7 @@ class TeacherUI():
             width=BUTTONWIDTH,
             height=BUTTONHEIGHT,
             bg='khaki',
-            command=lambda: self.editQuestion()
+            command=lambda: self.WorkFrameUI.pickQuestionInterface()
         )
         self.__buttonEditQuestion.grid(row=2, column=1, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
 
@@ -72,7 +73,7 @@ class TeacherUI():
             width=BUTTONWIDTH,
             height=BUTTONHEIGHT,
             bg='khaki',
-            command=lambda: self.addQuestionToQuiz()
+            command=lambda: self.WorkFrameUI.buildChooseQuizInterface(type="add")
         )
         self.__buttonAddQuestionToQuiz.grid(row=2, column=2, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
 
@@ -82,7 +83,7 @@ class TeacherUI():
             width=BUTTONWIDTH,
             height=BUTTONHEIGHT,
             bg='khaki',
-            command=lambda: self.removeQuestionFromQuiz()
+            command=lambda: self.WorkFrameUI.buildChooseQuizInterface(type="remove")
         )
         self.__buttonRemoveQuestionFromQuiz.grid(row=2, column=3, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
 
@@ -139,6 +140,9 @@ class TeacherUI():
 
         #self.screen.grid(row=4, column=1, rowspan=1, columnspan=8)
 
+    # MdL: all the functions below here are just a step to make sure the user is authorized before calling the right function in the interface
+    # MdL: The 'logged in' variable is set in this class
+    # MdL: Captain hindsight is wondering now if this was the right choice, since this feels kinda redundant.
 
     def makeQuestion(self):
         # Responsiblity:
@@ -146,16 +150,30 @@ class TeacherUI():
         if self.__authorized:
             print("authorized, good to go")
             self.WorkFrameUI.buildAddQuestionInterface()
-            self.__teacherID
         else:
             self.__showUsername = tk.Label(self.window, text="Not logged in")
             print("Not authorized")
         #self.removeAddQuestionInterface()
 
     def makeQuiz(self):
-        pass
+        # Responsiblity:
+        # If the user is authorized, build the add quiz interface.
+        if self.__authorized:
+            print("authorized, good to go")
+            self.WorkFrameUI.buildAddQuizInterface()
+        else:
+            self.__showUsername = tk.Label(self.window, text="Not logged in")
+            print("Not authorized")
+
     def editQuestion(self):
-        pass
+        # Responsiblity:
+        # If the user is authorized, build the add quiz interface.
+        if self.__authorized:
+            print("authorized, good to go")
+            self.WorkFrameUI.buildEditQuizInterface()
+        else:
+            self.__showUsername = tk.Label(self.window, text="Not logged in")
+            print("Not authorized")
     def addQuestionToQuiz(self):
         pass
     def removeQuestionFromQuiz(self):
@@ -165,7 +183,13 @@ class TeacherUI():
     def deleteQuiz(self):
         pass
     def seeResults(self):
-        pass
+        if self.__authorized:
+            print("authorized, good to go")
+            self.resultHandler.buildSeeResultsInterface()
+        else:
+            self.__showUsername = tk.Label(self.window, text="Not logged in")
+            print("Not authorized")
+
     def authorize(self):
         # Responsiblity:
         # Check if the entered username and password are correct.

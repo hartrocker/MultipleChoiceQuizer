@@ -6,13 +6,18 @@ class QuizHandler(DB_handler):
     def __init__(self):
         super().__init__()
 
+    def quizIDExists(self, id):
+        if self.getQuiz(id):
+            return True
+        else:
+            return False
+
     def getAllQuizes(self):
         # Responsibility:
         # get all quizes from the database
         getQuizesQuery = "SELECT * FROM quiz"
         try:
             self._DBoperator.execute(getQuizesQuery)
-            print(self._DBoperator.fetchall())
             return self._DBoperator.fetchall()
         except sqlite3.OperationalError as error:
             print(error)
@@ -59,9 +64,10 @@ class QuizHandler(DB_handler):
     def addQuiz(self, quizname, creatorID):
         # Responsibility:
         # insert the provided quizname and creatorID into the quiz table
-        insertQuizQuery = "INSERT into quiz (quizName, creatorID) VALUES (?, ?)"
+        insertQuizQuery = "INSERT into quiz (quizName, creatorID, dateAdded) VALUES (?, ?, ?)"
+        dateAdded=self.getDateString()
         try:
-            self._DBoperator.execute(insertQuizQuery, (quizname, creatorID))
+            self._DBoperator.execute(insertQuizQuery, (quizname, creatorID, dateAdded))
             self._conn.commit()
             return True
         except sqlite3.OperationalError as error:
