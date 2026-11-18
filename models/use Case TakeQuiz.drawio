@@ -1,0 +1,172 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Pagina-1" id="InAcrvT9z8ZUiK8hSMxX">
+    <mxGraphModel dx="1414" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-15" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":StudentUI" vertex="1">
+          <mxGeometry height="350" width="100" x="90" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-16" parent="vx-DsR_cdqSXvsAj11jB-15" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="30" width="10" x="45" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-17" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":QuestionHander" vertex="1">
+          <mxGeometry height="360" width="100" x="637" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-18" parent="vx-DsR_cdqSXvsAj11jB-17" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="310" width="10" x="45" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-19" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":ResultHander" vertex="1">
+          <mxGeometry height="450" width="100" x="857" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-20" parent="vx-DsR_cdqSXvsAj11jB-19" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="255" width="10" x="45" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-21" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value=":QuizHandler" vertex="1">
+          <mxGeometry height="460" width="100" x="350" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-22" parent="vx-DsR_cdqSXvsAj11jB-21" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="70" width="10" x="45" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-42" parent="vx-DsR_cdqSXvsAj11jB-21" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="255" width="10" x="45" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-23" edge="1" parent="1" source="vx-DsR_cdqSXvsAj11jB-16" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;" target="vx-DsR_cdqSXvsAj11jB-22" value="makeChooseQuizInterface()">
+          <mxGeometry relative="1" x="0.338" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="288.5" y="160" />
+            </Array>
+            <mxPoint x="294" y="160" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-24" edge="1" parent="1" source="vx-DsR_cdqSXvsAj11jB-22" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;exitX=1;exitY=0;exitDx=0;exitDy=5;exitPerimeter=0;" target="vx-DsR_cdqSXvsAj11jB-17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="547" y="470" as="sourcePoint" />
+            <mxPoint x="597" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-25" connectable="0" parent="vx-DsR_cdqSXvsAj11jB-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="getAllQuizes()" vertex="1">
+          <mxGeometry relative="1" x="-0.1882" y="8" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-26" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="686.5" y="190" as="sourcePoint" />
+            <mxPoint x="399.5" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-27" connectable="0" parent="vx-DsR_cdqSXvsAj11jB-26" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="quizes" vertex="1">
+          <mxGeometry relative="1" x="0.224" y="-9" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-28" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="399.5" y="263" as="sourcePoint" />
+            <mxPoint x="906.5" y="263" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-29" connectable="0" parent="vx-DsR_cdqSXvsAj11jB-28" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="getQuestionForQuiz(quizid)" vertex="1">
+          <mxGeometry relative="1" x="-0.6598" y="8" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-30" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="905.5" y="287" as="sourcePoint" />
+            <mxPoint x="398.5" y="287" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-31" connectable="0" parent="vx-DsR_cdqSXvsAj11jB-30" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="questions" vertex="1">
+          <mxGeometry relative="1" x="-0.0059" y="-9" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-36" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="vx-DsR_cdqSXvsAj11jB-20" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="405" y="440" as="sourcePoint" />
+            <mxPoint x="875" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-37" connectable="0" parent="vx-DsR_cdqSXvsAj11jB-36" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="&lt;div&gt;addResult(studentname, studentclass,&lt;/div&gt;&lt;div&gt;quiztype, goodAnswers, noOfQuestions,&lt;/div&gt;&lt;div&gt;quizid, subjectid)&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.2233" y="6" as="geometry">
+            <mxPoint x="91" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-38" edge="1" parent="1" source="vx-DsR_cdqSXvsAj11jB-20" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="874.5" y="460" as="sourcePoint" />
+            <mxPoint x="405" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-39" connectable="0" parent="vx-DsR_cdqSXvsAj11jB-38" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="true" vertex="1">
+          <mxGeometry relative="1" x="0.6157" y="-9" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-40" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;edgeStyle=orthogonalEdgeStyle;innerLoopWaypoints=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="501.5" y="218" />
+              <mxPoint x="501.5" y="238" />
+            </Array>
+            <mxPoint x="401" y="218" as="sourcePoint" />
+            <mxPoint x="401" y="238" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-41" connectable="0" parent="vx-DsR_cdqSXvsAj11jB-40" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="makeQuestionInterface(quizid)" vertex="1">
+          <mxGeometry relative="1" x="-0.4982" y="5" as="geometry">
+            <mxPoint x="51" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-44" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;edgeStyle=orthogonalEdgeStyle;innerLoopWaypoints=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="502.5" y="309" />
+              <mxPoint x="502.5" y="329" />
+            </Array>
+            <mxPoint x="402" y="309" as="sourcePoint" />
+            <mxPoint x="402" y="329" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-45" connectable="0" parent="vx-DsR_cdqSXvsAj11jB-44" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="displayQuestion(question)" vertex="1">
+          <mxGeometry relative="1" x="-0.4982" y="5" as="geometry">
+            <mxPoint x="37" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-46" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;edgeStyle=orthogonalEdgeStyle;innerLoopWaypoints=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="503.5" y="352" />
+              <mxPoint x="503.5" y="372" />
+            </Array>
+            <mxPoint x="403" y="352" as="sourcePoint" />
+            <mxPoint x="403" y="372" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-47" connectable="0" parent="vx-DsR_cdqSXvsAj11jB-46" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="loadNextQuestion(question)" vertex="1">
+          <mxGeometry relative="1" x="-0.4982" y="5" as="geometry">
+            <mxPoint x="37" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-48" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;labelPadding=0 4;edgeStyle=orthogonalEdgeStyle;innerLoopWaypoints=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="505.5" y="395" />
+              <mxPoint x="505.5" y="415" />
+            </Array>
+            <mxPoint x="405" y="395" as="sourcePoint" />
+            <mxPoint x="405" y="415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vx-DsR_cdqSXvsAj11jB-49" connectable="0" parent="vx-DsR_cdqSXvsAj11jB-48" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;labelPadding=0 4;" value="displayResultsAfterQUiz()" vertex="1">
+          <mxGeometry relative="1" x="-0.4982" y="5" as="geometry">
+            <mxPoint x="30" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
