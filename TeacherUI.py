@@ -1,12 +1,12 @@
 import tkinter as tk
 
-from ResultHandler import ResultHandler
+
 from WorkframeUI import WorkframeUI
 from DB_handler import DB_handler
 from QuestionHander import QuestionHandler
 from SubjectHandler import SubjectHandler
-#from QuizHandler import QuizHandler
-#from ResultHandler import ResultHandler
+from QuizHandler import QuizHandler
+from ResultHandler import ResultHandler
 
 BUTTONPADDINGX = 3
 BUTTONPADDINGY = 3
@@ -93,7 +93,7 @@ class TeacherUI():
             width=BUTTONWIDTH,
             height=BUTTONHEIGHT,
             bg='coral',
-            command=lambda: self.deleteQuestion()
+            command=lambda:  self.WorkFrameUI.buildChooseQuestionInterface(type='delete')
         )
         self.__buttonDeleteQuestion.grid(row=3, column=1, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
 
@@ -103,7 +103,7 @@ class TeacherUI():
             width=BUTTONWIDTH,
             height=BUTTONHEIGHT,
             bg='coral',
-            command=lambda: self.deleteQuiz()
+            command=lambda:  self.WorkFrameUI.buildChooseQuizInterface(type='delete')
         )
         self.__buttonDeleteQuiz.grid(row=3, column=2, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
 
@@ -185,7 +185,7 @@ class TeacherUI():
     def seeResults(self):
         if self.__authorized:
             print("authorized, good to go")
-            self.resultHandler.buildSeeResultsInterface()
+            self.WorkFrameUI.buildSeeResultsInterface()
         else:
             self.__showUsername = tk.Label(self.window, text="Not logged in")
             print("Not authorized")

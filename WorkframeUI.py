@@ -193,15 +193,15 @@ class WorkframeUI():
         results = self.__resultHandler.getAllResults()
         print(results)
         self.clearInterface()
-        tk.Label(self.workFrame, text="Results").grid(row=1, column=1, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+        tk.Label(self.frame, text="Results").grid(row=1, column=1, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
         placement = 2
         for result in results:
             score = float(float(result[7])/float(result[6])*9+1)
-            tk.Label(self.workFrame, text="Quiz: " + result[1] ).grid(row=placement, column=0, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
-            tk.Label(self.workFrame, text=" Type: " + result[2] ).grid(row=placement, column=1, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
-            tk.Label(self.workFrame, text=" Good answers: " + str(result[7])).grid(row=placement, column=2, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
-            tk.Label(self.workFrame, text=" No of questions: " + str(result[6])).grid(row=placement, column=3, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
-            tk.Label(self.workFrame, text=" Grade: " + str(score)).grid(row=placement, column=4, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            tk.Label(self.frame, text="Quiz: " + result[1] ).grid(row=placement, column=0, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            tk.Label(self.frame, text=" Type: " + result[2] ).grid(row=placement, column=1, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            tk.Label(self.frame, text=" Good answers: " + str(result[7])).grid(row=placement, column=2, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            tk.Label(self.frame, text=" No of questions: " + str(result[6])).grid(row=placement, column=3, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            tk.Label(self.frame, text=" Grade: " + str(score)).grid(row=placement, column=4, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
             placement += 1
 
     '''edit question interface and functions'''
@@ -323,24 +323,36 @@ class WorkframeUI():
             self.label = tk.Label(self.frame, text=quiz[1])
             self.label.grid(row=placement, column=2, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
             placement += 1
-        self.__buttonMakeQuiz = tk.Button(
-            self.frame,
-            text="Choose this Quiz",
-            width=BUTTONWIDTH,
-            height=BUTTONHEIGHT,
-            bg='khaki',
-            command=lambda: self.buildChooseQuestionInterface(quizid=self.__quizChoosenToAddQuestion.get(), type=type)
-        )
-        self.__buttonMakeQuiz.grid(row=placement, column=8, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+        if type == 'add' or type == 'update' or type == 'remove':
+            self.__buttonMakeQuiz = tk.Button(
+                self.frame,
+                text="Choose this Quiz",
+                width=BUTTONWIDTH,
+                height=BUTTONHEIGHT,
+                bg='khaki',
+                command=lambda: self.buildChooseQuestionInterface(quizid=self.__quizChoosenToAddQuestion.get(), type=type)
+            )
+            self.__buttonMakeQuiz.grid(row=placement, column=8, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+        elif type == 'delete':
+            self.__buttonDeleteQuiz = tk.Button(
+                self.frame,
+                text="Choose this Quiz",
+                width=BUTTONWIDTH,
+                height=BUTTONHEIGHT,
+                bg='khaki',
+                command=lambda: self.buildConfirmationInterface(quizid=self.__quizChoosenToAddQuestion.get())
+            )
+            self.__buttonDeleteQuiz.grid(row=placement, column=8, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
 
 
-    def buildChooseQuestionInterface(self, quizid, type='add'):
+    def buildChooseQuestionInterface(self, quizid = None, type='add'):
         print ("Building Choose question interface")
-        quizid = quizid
-        if type == 'add':
+        if type == 'add' or type == 'delete' or type == 'update':
             questions = self.__questionHandler.getAllQuestions()
+            quizid = quizid
         if type == 'remove':
             questions = self.__questionHandler.getQuestionforQuiz(quizid)
+            quizid = quizid
         placement = 5
         self.clearInterface()
         self.__questionChoosenToAddToQuiz = tk.StringVar()
@@ -373,4 +385,63 @@ class WorkframeUI():
                 command=lambda: self.__questionHandler.removeQuestionFromQuiz(quizid=quizid,
                                                                          questionid=self.__questionChoosenToAddToQuiz.get())
             )
-            self.__buttonRemoveQuizQuestion.grid(row=placement, column=8, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            self.__buttonRemoveQuizQuestion.grid(row=placement, column=7, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+        elif type == 'delete':
+            self.__buttonDeleteQuestion = tk.Button(
+                self.frame,
+                text="Delete Question",
+                width=BUTTONWIDTH,
+                height=BUTTONHEIGHT,
+                bg='khaki',
+                command=lambda: self.buildConfirmationInterface(questionid=self.__questionChoosenToAddToQuiz.get())
+            )
+            self.__buttonDeleteQuestion.grid(row=placement, column=8, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+
+
+    def buildConfirmationInterface(self, quizid = None, questionid = None):
+        if quizid:
+            self.__quizname = self.__quizHandler.getQuiz(quizid)[1]
+            self.clearInterface()
+            self.label = tk.Label(self.frame, text="Are you sure you want to delete this quiz?").grid(row=1, column=1, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            self.label = tk.Label(self.frame, text= self.__quizname).grid(row=2, column=1, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            self.__buttonCancel = tk.Button(
+                self.frame,
+                text="Cancel",
+                width=BUTTONWIDTH,
+                height=BUTTONHEIGHT,
+                bg='khaki',
+                command=lambda: self.clearInterface()
+            )
+            self.__buttonCancel.grid(row=4, column=8, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            self.__buttonRemove = tk.Button(
+                self.frame,
+                text="Remove Quiz",
+                width=BUTTONWIDTH,
+                height=BUTTONHEIGHT,
+                bg='khaki',
+                command=lambda: self.__quizHandler.removeQuiz(quizid)
+            )
+            self.__buttonRemove.grid(row=4, column=8, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+        elif questionid:
+            self.__questionname = self.__questionHandler.getQuestion(questionid)[1]
+            self.clearInterface()
+            self.label = tk.Label(self.frame, text="Are you sure you want to delete this quiz?").grid(row=1, column=1, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            self.label = tk.Label(self.frame, text= self.__questionname).grid(row=2, column=1, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            self.__buttonCancel = tk.Button(
+                self.frame,
+                text="Cancel",
+                width=BUTTONWIDTH,
+                height=BUTTONHEIGHT,
+                bg='khaki',
+                command=lambda: self.clearInterface()
+            )
+            self.__buttonCancel.grid(row=4, column=7, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
+            self.__buttonRemove = tk.Button(
+                self.frame,
+                text="Remove Question",
+                width=BUTTONWIDTH,
+                height=BUTTONHEIGHT,
+                bg='khaki',
+                command=lambda: self.__questionHandler.removeQuestion(questionid)
+            )
+            self.__buttonRemove.grid(row=4, column=8, padx=BUTTONPADDINGX, pady=BUTTONPADDINGY)
